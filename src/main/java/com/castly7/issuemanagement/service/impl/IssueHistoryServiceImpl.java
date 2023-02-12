@@ -5,7 +5,9 @@ import com.castly7.issuemanagement.repository.IssueHistoryRepository;
 import com.castly7.issuemanagement.service.IssueHistoryService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
+@Service
 public class IssueHistoryServiceImpl  implements IssueHistoryService {
     private final IssueHistoryRepository issueHistoryRepository;
 

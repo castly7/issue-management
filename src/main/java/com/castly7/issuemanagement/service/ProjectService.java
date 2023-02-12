@@ -12,4 +12,6 @@ public interface ProjectService {
     List<Project> getByProjectCodeContains(String projectCode);
     Project getById(Long id);
     Page<Project> getAllPageable(Pageable pageable);
+
+    Boolean delete(Project project);
 }
