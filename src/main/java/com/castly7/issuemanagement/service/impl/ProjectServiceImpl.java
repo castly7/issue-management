@@ -3,8 +3,6 @@ package com.castly7.issuemanagement.service.impl;
 import com.castly7.issuemanagement.entity.Project;
 import com.castly7.issuemanagement.repository.ProjectRepository;
 import com.castly7.issuemanagement.service.ProjectService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,6 +26,9 @@ public class ProjectServiceImpl implements ProjectService {
         return projectRepository.getOne(id);
     }
 
+
+
+
     @Override
     public List<Project> getByProjectCode(String projectCode) {
         return null;
@@ -38,8 +39,9 @@ public class ProjectServiceImpl implements ProjectService {
         return null;
     }
     @Override
-    public Page<Project> getAllPageable(Pageable pageable) {
-        return projectRepository.findAll(pageable);
+    public List<Project> getAll()
+    {
+        return projectRepository.findAll();
     }
     @Override
     public Boolean delete(Project project){

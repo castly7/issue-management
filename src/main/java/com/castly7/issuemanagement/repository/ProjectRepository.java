@@ -11,8 +11,8 @@ import java.util.List;
 public interface ProjectRepository extends JpaRepository<Project,Long> {
 
     List<Project> getByProjectCode (String projectCode);
-    List<Project> geyByProjectCodeContains  (String projectCode);
-    Page<Project> findAll (Pageable pageable);
+    List<Project> getByProjectCodeContains  (String projectCode);
+    List<Project> findAll ();
     List<Project> findAllBy(Sort sort);
 
 }

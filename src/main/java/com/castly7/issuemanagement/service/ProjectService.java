@@ -11,7 +11,6 @@ public interface ProjectService {
     List<Project> getByProjectCode(String projectCode);
     List<Project> getByProjectCodeContains(String projectCode);
     Project getById(Long id);
-    Page<Project> getAllPageable(Pageable pageable);
-
+    List<Project> getAll();
     Boolean delete(Project project);
 }
